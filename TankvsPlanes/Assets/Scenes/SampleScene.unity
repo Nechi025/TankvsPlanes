@@ -289,7 +289,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559287125
 GameObject:
@@ -466,10 +466,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
-    - {fileID: 5642242631931220822, guid: 5f9aeccdbb2ee7946b65ab2c79c8943a, type: 3}
-    - {fileID: 5642242631931220822, guid: 5f9aeccdbb2ee7946b65ab2c79c8943a, type: 3}
-    timeBetweenSpawns: 2
-  timeBetweenWaves: 5
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    timeBetweenSpawns: 1
+  timeBetweenWaves: 1
   spawnRadius: 2
 --- !u!1 &1390168094
 GameObject:
@@ -548,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390168094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.1802, z: 0}
+  m_LocalPosition: {x: 0, y: -4.1802, z: 0.5}
   m_LocalScale: {x: 1.1679674, y: 1.6012771, z: 1.1679674}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,6 +654,22 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5547352913941098451, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: damageColor.b
+      value: 0.45882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547352913941098451, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: damageColor.g
+      value: 0.45882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547352913941098451, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: damageColor.r
+      value: 0.9254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547352913941098451, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: damageDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6175974537418143745, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: cam
       value: 
@@ -668,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6175974538271795030, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6175974538271795030, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,6 +729,30 @@ PrefabInstance:
     - target: {fileID: 6175974538271795030, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175974538271795031, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6175974538271795033, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175974538271795033, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752037849711712849, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752037849711712849, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752037849711712849, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}

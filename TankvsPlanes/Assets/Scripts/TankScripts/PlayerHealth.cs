@@ -11,19 +11,18 @@ public class PlayerHealth : MonoBehaviour
     //Collider del jugador
     private Collider2D playerCollider;
 
-    // Texto de vida
-    public Text healthText;
+
+    private bool isTakingDamage = false;
+    private Color originalColor;
+    public Color damageColor = Color.red; // Adjust the damage color
+    public float damageDuration = 0.5f;
 
     private void Start()
     {
         currentHealth = maxHealth;
         playerCollider = GetComponent<Collider2D>();
+        originalColor = GetComponent<SpriteRenderer>().color;
 
-
-        if (healthText != null)
-        {
-            UpdateHealthText();
-        }
     }
 
     private void Update()
@@ -40,12 +39,29 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        StartCoroutine(ShowDamageIndicator());
 
-        // Actualizar Texto
-        UpdateHealthText();
     }
 
 
+    private IEnumerator ShowDamageIndicator()
+    {
+        if (!isTakingDamage)
+        {
+            isTakingDamage = true;
+
+            // Change the color to the damage color
+            GetComponent<SpriteRenderer>().color = damageColor;
+
+            // Wait for the damage duration
+            yield return new WaitForSeconds(damageDuration);
+
+            // Restore the original color
+            GetComponent<SpriteRenderer>().color = originalColor;
+
+            isTakingDamage = false;
+        }
+    }
 
     public int GetCurrentHealth()
     {
@@ -53,16 +69,6 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    // Actualizar el texto de vida
-    private void UpdateHealthText()
-    {
-        if (healthText != null)
-        {
-            healthText.text = "Health: " + currentHealth.ToString();
-        }
-    }
-
-    //
     private void RestartGame()
     {
 

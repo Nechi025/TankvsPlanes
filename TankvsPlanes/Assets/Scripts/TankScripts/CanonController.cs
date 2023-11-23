@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class CanonController : MonoBehaviour
@@ -11,16 +10,23 @@ public class CanonController : MonoBehaviour
     private float timeOfLastShot;
     private float minRotation = -90f;
 
+    private GameObject tanqueCuerpo;
+    private SpriteRenderer tanqueCuerpoRenderer;
+
     void Start()
     {
-
         Cursor.visible = false;
+
+        tanqueCuerpo = transform.parent.gameObject;
+        tanqueCuerpoRenderer = tanqueCuerpo.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         Aim();
         Shoot();
+
+        GetComponent<SpriteRenderer>().color = tanqueCuerpoRenderer.color;
     }
 
     void Aim()
@@ -39,7 +45,6 @@ public class CanonController : MonoBehaviour
 
         transform.rotation = rotation;
     }
-
 
     void Shoot()
     {

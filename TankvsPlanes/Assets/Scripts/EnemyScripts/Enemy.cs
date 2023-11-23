@@ -18,14 +18,20 @@ public class Enemy : MonoBehaviour
 
 
     public GameObject bombPrefab; // Prefab de Bomba
-    private float lastBombTime; // Time when the last bomb was dropped
-    private bool isBombing = false; // Flag to track if the enemy is currently dropping bombs
+    private float lastBombTime; 
+    private bool isBombing = false; 
 
+
+
+    private bool isTakingDamage = false;
+    private Color originalColor;
+    public Color damageColor = Color.red; 
+    public float damageDuration = 0.5f;
 
     private void Start()
     {
         Destroy(gameObject, lifetime);
-
+        originalColor = GetComponent<SpriteRenderer>().color;
     }
 
     private void Update()
@@ -46,7 +52,9 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         maxHealth -= damage;
-
+    
+        StartCoroutine(ShowDamageIndicator());
+        
         if (maxHealth <= 0)
         {
             // Destruir
@@ -77,5 +85,25 @@ public class Enemy : MonoBehaviour
 
         isBombing = false;
         lastBombTime = Time.time;
+    }
+
+
+    private IEnumerator ShowDamageIndicator()
+    {
+        if (!isTakingDamage)
+        {
+            isTakingDamage = true;
+
+            // Change the color to the damage color
+            GetComponent<SpriteRenderer>().color = damageColor;
+
+            // Wait for the damage duration
+            yield return new WaitForSeconds(damageDuration);
+
+            // Restore the original color
+            GetComponent<SpriteRenderer>().color = originalColor;
+
+            isTakingDamage = false;
+        }
     }
 }
