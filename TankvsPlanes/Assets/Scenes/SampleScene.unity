@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 52014450}
   - component: {fileID: 52014449}
-  - component: {fileID: 52014451}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -208,24 +207,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &52014451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52014447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684dd1b1cbfd778498bb19cd29481c3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite100: {fileID: 21300000, guid: b9e8ba24d446dc145b6772ed5928ad32, type: 3}
-  sprite75: {fileID: 21300000, guid: 30cefa3751b9d5641986bf355a0f8d93, type: 3}
-  sprite50: {fileID: 21300000, guid: 8fb448dc544e55a4fa540f78cf64098b, type: 3}
-  sprite25: {fileID: 21300000, guid: b3ce7d4de3120c04ca322b9385e7c7d4, type: 3}
-  sprite0: {fileID: 21300000, guid: 02b2e23b59935ea4c861a39ef42fdd13, type: 3}
-  health: 0
 --- !u!1 &65717457
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,9 +791,6 @@ PrefabInstance:
       propertyPath: lifeSprite
       value: 
       objectReference: {fileID: 52014449}
-      propertyPath: damageColor.b
-      value: 0.45882353
-      objectReference: {fileID: 0}
     - target: {fileID: 5547352913941098451, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: damageColor.g
       value: 0.45882353
