@@ -18,12 +18,20 @@ public class PlayerHealth : MonoBehaviour
     //Collider del jugador
     private Collider2D playerCollider;
 
+
+    private bool isTakingDamage = false;
+    private Color originalColor;
+    public Color damageColor = Color.red; // Adjust the damage color
+    public float damageDuration = 0.5f;
+
     private void Start()
     {
         currentHealth = maxHealth;
         playerCollider = GetComponent<Collider2D>();
         
         lifeSprite = lifeSprite.GetComponent<SpriteRenderer>();
+        originalColor = GetComponent<SpriteRenderer>().color;
+
     }
 
     private void Update()
@@ -58,13 +66,33 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Aplicar daño al jugador
+    // Aplicar daï¿½o al jugador
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        StartCoroutine(ShowDamageIndicator());
+
     }
 
 
+    private IEnumerator ShowDamageIndicator()
+    {
+        if (!isTakingDamage)
+        {
+            isTakingDamage = true;
+
+            // Change the color to the damage color
+            GetComponent<SpriteRenderer>().color = damageColor;
+
+            // Wait for the damage duration
+            yield return new WaitForSeconds(damageDuration);
+
+            // Restore the original color
+            GetComponent<SpriteRenderer>().color = originalColor;
+
+            isTakingDamage = false;
+        }
+    }
 
     public int GetCurrentHealth()
     {
@@ -75,7 +103,5 @@ public class PlayerHealth : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3);
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
