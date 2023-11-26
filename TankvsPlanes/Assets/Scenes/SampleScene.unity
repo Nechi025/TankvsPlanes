@@ -559,6 +559,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1673277601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6175974538271795028, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+  m_PrefabInstance: {fileID: 6175974538228726417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1673277602
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673277601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5061ca44c0691c842b13f5b7e718b858, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1673277609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673277601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46768f9b8aa903248bc93c71c098ef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2010334229
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +778,14 @@ PrefabInstance:
     - target: {fileID: 6175974538271795033, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175974538271795035, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1673277602}
+    - target: {fileID: 7548582922037440071, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8752037849711712849, guid: a96aa6bbf521cbf4c84e82db603b4317, type: 3}
       propertyPath: m_Color.b

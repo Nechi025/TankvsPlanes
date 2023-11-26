@@ -9,13 +9,16 @@ public class PlayerController : MonoBehaviour
     private float currentSpeed = 0.0f;
     private float targetSpeed = 0.0f;
 
+    public Animator animator; 
+
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         targetSpeed = horizontalInput * moveSpeed;
         currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
 
-      
+        animator.SetFloat("Speed", Mathf.Abs(currentSpeed));
+
         Vector3 newPosition = transform.position + new Vector3(currentSpeed * Time.deltaTime, 0f, 0f);
 
         Bounds spriteBounds = GetComponent<SpriteRenderer>().bounds;
