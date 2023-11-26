@@ -101,7 +101,10 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator RestartGame()
     {
+        PlayerController.Destroy(gameObject);
 
         yield return new WaitForSeconds(3);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }

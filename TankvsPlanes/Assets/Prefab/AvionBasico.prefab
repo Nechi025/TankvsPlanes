@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   speed: 3
-  lifetime: 6
+  lifetime: 10
   bombAmount: 3
   bombDelay: 1
   bombCooldown: 1
