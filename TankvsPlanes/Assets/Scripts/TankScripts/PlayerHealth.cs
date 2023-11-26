@@ -50,13 +50,11 @@ public class PlayerHealth : MonoBehaviour
         {
             isTakingDamage = true;
 
-            // Change the color to the damage color
+        
             GetComponent<SpriteRenderer>().color = damageColor;
 
-            // Wait for the damage duration
             yield return new WaitForSeconds(damageDuration);
 
-            // Restore the original color
             GetComponent<SpriteRenderer>().color = originalColor;
 
             isTakingDamage = false;
