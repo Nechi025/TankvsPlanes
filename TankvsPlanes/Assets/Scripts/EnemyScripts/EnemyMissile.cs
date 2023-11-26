@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class EnemyMissile : MonoBehaviour
 {
-    public int damage = 10; // Daño
+    public int damage = 25; // Daño
     public float initialSpeed = 2f; // IVelocidad incial
     public float timeToAcceleration = 2f; // Tiempo de aceleracion
     public float acceleratedSpeed = 5f; // Velocidad de aceleracion
-    public float lifetime = 20f; // Tiempo de vida
+    public float lifetime = 5f; // Tiempo de vida
 
     private Rigidbody2D rb;
     private float accelerationTimer = 0f;

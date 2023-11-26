@@ -150,4 +150,4 @@ MonoBehaviour:
   initialSpeed: 1
   timeToAcceleration: 0
   acceleratedSpeed: 5
-  lifetime: 20
+  lifetime: 5
