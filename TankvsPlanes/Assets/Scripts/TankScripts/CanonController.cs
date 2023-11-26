@@ -13,6 +13,8 @@ public class CanonController : MonoBehaviour
     private GameObject tanqueCuerpo;
     private SpriteRenderer tanqueCuerpoRenderer;
 
+    public float rotationSpeed = 5f;
+
     void Start()
     {
         Cursor.visible = false;
@@ -35,15 +37,11 @@ public class CanonController : MonoBehaviour
 
         Vector3 direction = (mousePosition - transform.position).normalized;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        targetAngle = Mathf.Clamp(targetAngle, minRotation, 90f);
 
-        angle -= 90f;
-
-        angle = Mathf.Clamp(angle, minRotation, 90f);
-
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        transform.rotation = rotation;
+        Quaternion targetRotation = Quaternion.AngleAxis(targetAngle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 
     void Shoot()
