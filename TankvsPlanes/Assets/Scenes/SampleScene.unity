@@ -466,11 +466,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
+    - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
+    - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     timeBetweenSpawns: 1
   timeBetweenWaves: 1
@@ -584,18 +584,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1673277609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673277601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46768f9b8aa903248bc93c71c098ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2010334229
 GameObject:
   m_ObjectHideFlags: 0
