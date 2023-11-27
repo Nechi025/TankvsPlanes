@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, ICollision
 {
     public int damage = 1;
     public float lifetime = 3f;
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
@@ -40,6 +40,18 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.CompareTag("Boss"))
+        {
+
+            BossFight boss = collision.GetComponent<BossFight>();
+
+            if (boss != null)
+            {
+                // Daño Jefe
+                boss.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }
 
         if (collision.CompareTag("BalaEnemy"))
         {

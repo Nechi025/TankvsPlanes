@@ -558,7 +558,7 @@ MonoBehaviour:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
-    timeBetweenSpawns: 1
+    timeBetweenSpawns: 1.25
   - enemies:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
@@ -575,7 +575,7 @@ MonoBehaviour:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 0.75
+    timeBetweenSpawns: 1.25
   - enemies:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
@@ -587,7 +587,7 @@ MonoBehaviour:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 1.75
+    timeBetweenSpawns: 2
   - enemies:
     - {fileID: 8790970323992478134, guid: 7ffe9f36b9b7d8340bdd90b5158523d9, type: 3}
     - {fileID: 769353245780217566, guid: ef528bafdfc1aed44b6ad0d5c4ebe184, type: 3}
@@ -599,7 +599,7 @@ MonoBehaviour:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 1
+    timeBetweenSpawns: 1.25
   - enemies:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
@@ -609,7 +609,7 @@ MonoBehaviour:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 1
+    timeBetweenSpawns: 1.25
   - enemies:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 8790970323992478134, guid: 7ffe9f36b9b7d8340bdd90b5158523d9, type: 3}
@@ -619,7 +619,7 @@ MonoBehaviour:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 1
+    timeBetweenSpawns: 1.25
   - enemies:
     - {fileID: 8790970323992478134, guid: 7ffe9f36b9b7d8340bdd90b5158523d9, type: 3}
     - {fileID: 8790970323992478134, guid: 7ffe9f36b9b7d8340bdd90b5158523d9, type: 3}
@@ -631,7 +631,7 @@ MonoBehaviour:
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
-    timeBetweenSpawns: 0.75
+    timeBetweenSpawns: 1.5
   - enemies:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
@@ -640,6 +640,9 @@ MonoBehaviour:
     - {fileID: 460144267547305196, guid: e5d401f4a27a8484e96d88dbbd5aa5c5, type: 3}
     - {fileID: 3323758967216472746, guid: 09a29d296ed24244987ace5c9dc4f1f9, type: 3}
     timeBetweenSpawns: 1
+  - enemies:
+    - {fileID: 5004678416136429704, guid: fd6c59da37dc0e54ab02b0dd841a6b83, type: 3}
+    timeBetweenSpawns: 1.25
   timeBetweenWaves: 1
   spawnRadius: 1.3
 --- !u!1 &1390168094
@@ -988,6 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe218752262c75429f79a4dca044ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
 --- !u!1 &2010334229
 GameObject:
   m_ObjectHideFlags: 0

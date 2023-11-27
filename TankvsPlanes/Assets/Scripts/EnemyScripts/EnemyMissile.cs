@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMissile : MonoBehaviour
+public class EnemyMissile : MonoBehaviour, ICollision
 {
     public int damage = 25; // Daño
     public float initialSpeed = 2f; // IVelocidad incial
@@ -34,7 +34,7 @@ public class EnemyMissile : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         // Colosion con jugador 
         if (collision.CompareTag("Player"))
