@@ -77,22 +77,22 @@ public class MainMenu : MonoBehaviour
         switch (index)
         {
             case 0:
-                selected.transform.position = new Vector3(760, 590, 0);
+                selected.transform.position = new Vector3(955, 885, 0);
                 break;
             case 1:
-                selected.transform.position = new Vector3(760, 490, 0);
+                selected.transform.position = new Vector3(955, 720, 0);
                 break;
             case 2:
-                selected.transform.position = new Vector3(760, 390, 0);
+                selected.transform.position = new Vector3(955, 570, 0);
                 break;
             case 3:
-                selected.transform.position = new Vector3(760, 320, 0);
+                selected.transform.position = new Vector3(955, 470, 0);
                 break;
             case 4:
-                selected.transform.position = new Vector3(760, 220, 0);
+                selected.transform.position = new Vector3(955, 320, 0);
                 break;
             case 5:
-                selected.transform.position = new Vector3(760, 150, 0);
+                selected.transform.position = new Vector3(955, 220, 0);
                 break;
         }
     }
