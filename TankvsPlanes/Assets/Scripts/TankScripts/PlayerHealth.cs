@@ -17,7 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     //Collider del jugador
     private Collider2D playerCollider;
-
+    public AudioClip hurtSound;
+    private AudioSource audioSource;
 
     private bool isTakingDamage = false;
     private Color originalColor;
@@ -31,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
         
         lifeSprite = lifeSprite.GetComponent<SpriteRenderer>();
         originalColor = GetComponent<SpriteRenderer>().color;
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -71,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         StartCoroutine(ShowDamageIndicator());
-
+        PlayHurtSound();
     }
 
 
@@ -104,5 +105,14 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+
+    private void PlayHurtSound()
+    {
+        if (hurtSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hurtSound);
+        }
     }
 }

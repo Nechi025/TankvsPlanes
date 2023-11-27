@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
         }
 
 
-        if (collision.CompareTag("Bala"))
+        if (collision.CompareTag("BalaEnemy"))
         {
             Destroy(gameObject);
         }

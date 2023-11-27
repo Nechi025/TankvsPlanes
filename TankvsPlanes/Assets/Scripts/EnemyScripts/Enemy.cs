@@ -28,10 +28,14 @@ public class Enemy : MonoBehaviour
     public Color damageColor = Color.red; 
     public float damageDuration = 0.5f;
 
+    public AudioClip hurtSound;
+    private AudioSource audioSource;
+
     private void Start()
     {
         Destroy(gameObject, lifetime);
         originalColor = GetComponent<SpriteRenderer>().color;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -60,6 +64,8 @@ public class Enemy : MonoBehaviour
             // Destruir
             Destroy(gameObject);
         }
+        PlayHurtSound();
+
     }
 
 
@@ -104,6 +110,15 @@ public class Enemy : MonoBehaviour
             GetComponent<SpriteRenderer>().color = originalColor;
 
             isTakingDamage = false;
+        }
+    }
+
+
+    private void PlayHurtSound()
+    {
+        if (hurtSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hurtSound);
         }
     }
 }

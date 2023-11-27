@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &460144267547305196
+--- !u!1 &8790970323992478134
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7576756383686642202}
-  - component: {fileID: 1095579635763012433}
-  - component: {fileID: 2120984601801677295}
-  - component: {fileID: 6951706050534639883}
-  - component: {fileID: 6257022817568730743}
-  - component: {fileID: 2071591007785192555}
+  - component: {fileID: 7504993943883366278}
+  - component: {fileID: 1530952847478535584}
+  - component: {fileID: 3594584336062337757}
+  - component: {fileID: 5707111936341993954}
+  - component: {fileID: 3382878610926203413}
+  - component: {fileID: 3459918317202778107}
   m_Layer: 0
-  m_Name: AvionPesado
+  m_Name: Helicoptero
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7576756383686642202
+--- !u!4 &7504993943883366278
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
+  m_GameObject: {fileID: 8790970323992478134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.237, y: 1.435, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.25, z: 1}
+  m_LocalPosition: {x: -26.86, y: 1.67, z: 0}
+  m_LocalScale: {x: 0.4489, y: 0.4081, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1095579635763012433
+--- !u!212 &1530952847478535584
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
+  m_GameObject: {fileID: 8790970323992478134}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,73 +77,51 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 590c15b39583bb44aaab1750eea9cc9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd445a7a59d202b4f9a14238b5119170, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.23, y: 2.5}
+  m_Size: {x: 9.07, y: 4.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2120984601801677295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6da66d0705a6a54dbbbcfe12f2d795c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 150
-  speed: 3
-  lifetime: 14
-  bombAmount: 3
-  bombDelay: 0.25
-  bombCooldown: 3
-  bombPrefab: {fileID: 1351698272220282946, guid: c2bc1de3d03bfec41bcdb8d48dc60783, type: 3}
-  damageColor: {r: 1, g: 0.7137255, b: 0.7137255, a: 1}
-  damageDuration: 0.2
-  hurtSound: {fileID: 8300000, guid: efd955c3c73dbd645b79a92e713aef05, type: 3}
---- !u!61 &6951706050534639883
+--- !u!61 &3594584336062337757
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
+  m_GameObject: {fileID: 8790970323992478134}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.32}
+  m_Offset: {x: 0, y: -0.36}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.23, y: 2.5}
-    newSize: {x: 10.23, y: 2.5}
+    oldSize: {x: 9.07, y: 4.48}
+    newSize: {x: 9.07, y: 4.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.04, y: 1.59}
+  m_Size: {x: 8.65, y: 3.07}
   m_EdgeRadius: 0
---- !u!50 &6257022817568730743
+--- !u!50 &5707111936341993954
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
+  m_GameObject: {fileID: 8790970323992478134}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -157,20 +135,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &2071591007785192555
+--- !u!114 &3382878610926203413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790970323992478134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6da66d0705a6a54dbbbcfe12f2d795c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 250
+  speed: 2.5
+  lifetime: 16
+  bombAmount: 5
+  bombDelay: 0.125
+  bombCooldown: 4.5
+  bombPrefab: {fileID: 624256057700781149, guid: 3b668049657b68141806af1d0ef62ab4, type: 3}
+  damageColor: {r: 1, g: 0.5803922, b: 0.5803922, a: 1}
+  damageDuration: 0.5
+  hurtSound: {fileID: 8300000, guid: efd955c3c73dbd645b79a92e713aef05, type: 3}
+--- !u!82 &3459918317202778107
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460144267547305196}
+  m_GameObject: {fileID: 8790970323992478134}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: efd955c3c73dbd645b79a92e713aef05, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.581
-  m_Pitch: 1.2
+  m_Volume: 0.5
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0
