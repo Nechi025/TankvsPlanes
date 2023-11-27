@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         float clampedX = Mathf.Clamp(newPosition.x, ScreenBounds.Left + spriteBounds.extents.x, ScreenBounds.Right - spriteBounds.extents.x);
 
         transform.position = new Vector3(clampedX, newPosition.y, newPosition.z);
-
     }
 
     public static class ScreenBounds

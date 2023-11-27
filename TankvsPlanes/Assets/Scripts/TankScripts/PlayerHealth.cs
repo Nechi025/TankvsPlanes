@@ -100,11 +100,12 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator RestartGame()
     {
+        GameManager.instance.YouLose();
+
+        yield return new WaitForSeconds(0.2f);
+
         PlayerController.Destroy(gameObject);
 
-        yield return new WaitForSeconds(3);
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
 

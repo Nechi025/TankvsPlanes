@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject selectMenu;
+    public GameObject win;
+    public GameObject lose;
     public GameObject selected;
     private int index = 1;
 
@@ -16,21 +18,48 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            if (gameObject.activeSelf == true)
+            if (mainMenu.activeSelf == true)
             {
                 mainMenu.SetActive(false);
                 selectMenu.SetActive(true);
             }
 
-            if (selectMenu.activeSelf == true && index == 0)
+            else if (selectMenu.activeSelf == true && index == 0)
             {
                 SceneManager.LoadScene(1);
             }
 
-            if (selectMenu.activeSelf == true && index == 5)
+            else if (selectMenu.activeSelf == true && index == 5)
             {
                 Application.Quit();
             }
+
+            else if (win.activeSelf == true)
+            {
+                win.SetActive(false);
+                mainMenu.SetActive(true);
+            }
+
+            else if (lose.activeSelf == true)
+            {
+                lose.SetActive(false);
+                mainMenu.SetActive(true);
+            }
+        }
+
+        if (GameManager.instance.gameState == 1)
+        {
+            mainMenu.SetActive(false);
+            win.SetActive(true);
+            GameManager.instance.gameState = 0;
+
+        }
+
+        if (GameManager.instance.gameState == 2)
+        {
+            mainMenu.SetActive(false);
+            lose.SetActive(true);
+            GameManager.instance.gameState = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.S) && index < 5 && selectMenu.activeSelf == true)
