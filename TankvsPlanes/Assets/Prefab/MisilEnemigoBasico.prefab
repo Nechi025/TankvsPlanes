@@ -151,7 +151,7 @@ MonoBehaviour:
   initialSpeed: 1
   timeToAcceleration: 0
   acceleratedSpeed: 5
-  lifetime: 5
+  lifetime: 2.4
 --- !u!82 &-5296624778137611124
 AudioSource:
   m_ObjectHideFlags: 0
