@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     private Color originalColor;
     public Color damageColor = Color.red; // Adjust the damage color
     public float damageDuration = 0.5f;
+    public GameObject destructionEffectPrefab;
 
     private void Start()
     {
@@ -41,8 +42,12 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Resetear juego si se muere
-
-            StartCoroutine(RestartGame());
+            Destroy(gameObject);
+            if (destructionEffectPrefab != null)
+            {
+                Instantiate(destructionEffectPrefab, transform.position, Quaternion.identity);
+            }
+            
         }
 
         if (currentHealth == 100)
@@ -98,15 +103,7 @@ public class PlayerHealth : MonoBehaviour
         return currentHealth;
     }
 
-    IEnumerator RestartGame()
-    {
-        GameManager.instance.YouLose();
-
-        yield return new WaitForSeconds(0.2f);
-
-        PlayerController.Destroy(gameObject);
-
-    }
+    
 
 
     private void PlayHurtSound()

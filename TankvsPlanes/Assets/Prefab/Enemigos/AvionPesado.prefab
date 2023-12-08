@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4353677728664424796
+--- !u!1 &460144267547305196
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4943285343606087190}
-  - component: {fileID: 3995342830908027105}
-  - component: {fileID: 7259126964414169772}
-  - component: {fileID: 6373606650166640813}
-  - component: {fileID: 5312532905642298302}
-  - component: {fileID: -1179185219025977996}
+  - component: {fileID: 7576756383686642202}
+  - component: {fileID: 1095579635763012433}
+  - component: {fileID: 2120984601801677295}
+  - component: {fileID: 6951706050534639883}
+  - component: {fileID: 6257022817568730743}
+  - component: {fileID: 2071591007785192555}
   m_Layer: 0
-  m_Name: BolaJefe
-  m_TagString: BalaEnemy
+  m_Name: AvionPesado
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4943285343606087190
+--- !u!4 &7576756383686642202
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
+  m_GameObject: {fileID: 460144267547305196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.41, y: 0.16, z: 0.1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -22.237, y: 1.435, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3995342830908027105
+--- !u!212 &1095579635763012433
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
+  m_GameObject: {fileID: 460144267547305196}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,40 +77,74 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 821b265f10efc10408b734b5374da343, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 590c15b39583bb44aaab1750eea9cc9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.78, y: 1.82}
+  m_Size: {x: 10.23, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7259126964414169772
+--- !u!114 &2120984601801677295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
+  m_GameObject: {fileID: 460144267547305196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec65abd1323c8a49a652a1b2ebd2035, type: 3}
+  m_Script: {fileID: 11500000, guid: b6da66d0705a6a54dbbbcfe12f2d795c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 7
-  damage: 25
+  maxHealth: 150
+  speed: 3
   lifetime: 6
---- !u!50 &6373606650166640813
+  bombAmount: 3
+  bombDelay: 0.25
+  bombCooldown: 3
+  bombPrefab: {fileID: 1351698272220282946, guid: c2bc1de3d03bfec41bcdb8d48dc60783, type: 3}
+  damageColor: {r: 1, g: 0.7137255, b: 0.7137255, a: 1}
+  damageDuration: 0.2
+  hurtSound: {fileID: 8300000, guid: efd955c3c73dbd645b79a92e713aef05, type: 3}
+  destructionEffectPrefab: {fileID: 8996576086308237734, guid: 2da87eeb9d1a05c408df291c71dcfe79, type: 3}
+--- !u!61 &6951706050534639883
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460144267547305196}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.32}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.23, y: 2.5}
+    newSize: {x: 10.23, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.04, y: 1.59}
+  m_EdgeRadius: 0
+--- !u!50 &6257022817568730743
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
+  m_GameObject: {fileID: 460144267547305196}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -124,36 +158,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5312532905642298302
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0.03}
-  serializedVersion: 2
-  m_Radius: 0.77
---- !u!82 &-1179185219025977996
+--- !u!82 &2071591007785192555
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353677728664424796}
+  m_GameObject: {fileID: 460144267547305196}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63d94f0e7d911d8458d75e7bf21ee67e, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: efd955c3c73dbd645b79a92e713aef05, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
