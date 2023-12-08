@@ -12,7 +12,6 @@ public class CanonController : MonoBehaviour
     private float timeOfLastShot;
 
 
-    
     public GameObject altBulletPrefab;
     public float altBulletSpeed = 10f;
     public float altTimeBtwShots = 1;
@@ -30,6 +29,8 @@ public class CanonController : MonoBehaviour
     private int fire1 = 0;
     public float timeBtwChange = 3;
     private float timeLastChange;
+
+    public Animator animator;
 
     void Start()
     {
@@ -73,6 +74,8 @@ public class CanonController : MonoBehaviour
         }
 
         GetComponent<SpriteRenderer>().color = tanqueCuerpoRenderer.color;
+
+        animator.SetFloat("Fire1", Mathf.Abs(fire1));
     }
 
 

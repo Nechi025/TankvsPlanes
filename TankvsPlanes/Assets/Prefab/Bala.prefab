@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3446591940567656073}
   - component: {fileID: 3008945129376406566}
   - component: {fileID: 4056229267967627433}
-  - component: {fileID: 7132179283204577616}
   - component: {fileID: 5012798621407956042}
   - component: {fileID: 3593911272786405815}
+  - component: {fileID: 2169823724249634787}
   m_Layer: 0
   m_Name: Bala
   m_TagString: BalaEnemy
@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624256057700781149}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -25.501, y: -2.836, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.501001, y: -2.8360088, z: 0}
   m_LocalScale: {x: 0.69962907, y: 0.5494, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3008945129376406566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -184,23 +184,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7132179283204577616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624256057700781149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 285cfd64661236f45a49067f0ae47f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 25
-  initialSpeed: 2
-  timeToAcceleration: 1.5
-  acceleratedSpeed: 5
-  lifetime: 6
 --- !u!61 &5012798621407956042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,14 +201,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.66}
+    oldSize: {x: 0.66, y: 0.16}
     newSize: {x: 0.66, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63, y: 0.07}
+  m_Size: {x: 0.18, y: 0.64}
   m_EdgeRadius: 0
 --- !u!50 &3593911272786405815
 Rigidbody2D:
@@ -248,3 +231,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2169823724249634787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624256057700781149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec65abd1323c8a49a652a1b2ebd2035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 5
+  damage: 25
+  lifetime: 7
