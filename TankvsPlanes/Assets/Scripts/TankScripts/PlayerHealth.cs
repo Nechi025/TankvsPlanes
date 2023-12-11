@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100; //Vida Jugador
-    public int currentHealth; //Vida actual de jugador
+    public int maxHealth = 100; 
+    public int currentHealth; 
     [SerializeField] private SpriteRenderer lifeSprite;
 
     [SerializeField] private Sprite sprite100;
@@ -15,14 +15,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Sprite sprite25;
     [SerializeField] private Sprite sprite0;
 
-    //Collider del jugador
     private Collider2D playerCollider;
     public AudioClip hurtSound;
     private AudioSource audioSource;
 
     private bool isTakingDamage = false;
     private Color originalColor;
-    public Color damageColor = Color.red; // Adjust the damage color
+    public Color damageColor = Color.red; 
     public float damageDuration = 0.5f;
     public GameObject destructionEffectPrefab;
 
@@ -38,10 +37,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        // Fijarse que la vida de jugador este arriba de 0
+        
         if (currentHealth <= 0)
         {
-            //Resetear juego si se muere
+            
             Destroy(gameObject);
             if (destructionEffectPrefab != null)
             {
@@ -72,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Aplicar da�o al jugador
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

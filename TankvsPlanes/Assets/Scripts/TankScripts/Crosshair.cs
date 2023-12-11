@@ -9,13 +9,7 @@ public class Crosshair : MonoBehaviour
 
     private void Start()
     {
-        if (crosshairPrefab == null)
-        {
-            Debug.LogError("Crosshair prefab not assigned!");
-            return;
-        }
-
-      
+        
         crosshairInstance = Instantiate(crosshairPrefab);
     }
 

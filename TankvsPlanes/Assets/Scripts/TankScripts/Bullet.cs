@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour, ICollision
 
             if (enemy != null)
             {
-                // Dañar enemigo
+                
                 enemy.TakeDamage(damage);
             }
 
@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour, ICollision
 
             if (boss != null)
             {
-                // Daño Jefe
+                
                 boss.TakeDamage(damage);
             }
             Destroy(gameObject);

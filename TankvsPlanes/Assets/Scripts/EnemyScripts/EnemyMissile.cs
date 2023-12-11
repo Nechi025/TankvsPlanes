@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class EnemyMissile : MonoBehaviour, ICollision
 {
-    public int damage = 25; // Daño
-    public float initialSpeed = 2f; // IVelocidad incial
-    public float timeToAcceleration = 2f; // Tiempo de aceleracion
-    public float acceleratedSpeed = 5f; // Velocidad de aceleracion
-    public float lifetime = 5f; // Tiempo de vida
+    public int damage = 25; 
+    public float initialSpeed = 2f; 
+    public float timeToAcceleration = 2f; 
+    public float acceleratedSpeed = 5f; 
+    public float lifetime = 5f; 
 
     private Rigidbody2D rb;
     private float accelerationTimer = 0f;
@@ -15,20 +15,19 @@ public class EnemyMissile : MonoBehaviour, ICollision
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //Velocidad para abajo
+      
         rb.velocity = -transform.up * initialSpeed;
         Destroy(gameObject, lifetime);
     }
 
     private void Update()
     {
-        // Contador de acceleracion
+        
         accelerationTimer += Time.deltaTime;
-
-        // Cuando pueda acelerar
+        
         if (!hasAccelerated && accelerationTimer >= timeToAcceleration)
         {
-            // el misil se acelera
+            
             rb.velocity = -transform.up * acceleratedSpeed;
             hasAccelerated = true;
         }
@@ -36,7 +35,7 @@ public class EnemyMissile : MonoBehaviour, ICollision
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        // Colosion con jugador 
+        
         if (collision.CompareTag("Player"))
         {
 
@@ -44,21 +43,20 @@ public class EnemyMissile : MonoBehaviour, ICollision
 
             if (player != null)
             {
-                //Hacer daño al jugador
+                
                 player.TakeDamage(damage);
             }
 
-            // se destruye
+            
             Destroy(gameObject);
         }
 
 
         if (collision.CompareTag("Bala"))
         {
-            // Chau Bomba
+          
             Destroy(this.gameObject);
         }
-
 
 
     }

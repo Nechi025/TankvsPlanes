@@ -36,7 +36,7 @@ public class BossFight : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        // Se mueve de izquierda a derecha
+      
         if (isMovingLeft)
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
@@ -103,7 +103,7 @@ public class BossFight : MonoBehaviour, IDamageable
     {
         bossCurrentHealth -= damage;
         StartCoroutine(ShowDamageIndicator());
-        // Primer fase derrotada
+   
         if (bossCurrentHealth <= 0)
         {
             Destroy(gameObject);
@@ -118,13 +118,13 @@ public class BossFight : MonoBehaviour, IDamageable
         {
             isTakingDamage = true;
 
-            // Change the color to the damage color
+            
             GetComponent<SpriteRenderer>().color = damageColor;
 
-            // Wait for the damage duration
+           
             yield return new WaitForSeconds(damageDuration);
 
-            // Restore the original color
+           
             GetComponent<SpriteRenderer>().color = originalColor;
 
             isTakingDamage = false;

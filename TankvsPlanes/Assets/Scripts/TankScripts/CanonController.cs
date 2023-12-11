@@ -38,6 +38,8 @@ public class CanonController : MonoBehaviour
 
         tanqueCuerpo = transform.parent.gameObject;
         tanqueCuerpoRenderer = tanqueCuerpo.GetComponent<SpriteRenderer>();
+
+
     }
 
 
@@ -47,17 +49,20 @@ public class CanonController : MonoBehaviour
         Aim();
 
         
-
-
         if (Input.GetButton("Fire1")) 
         {
+
             if (fire1 == 0)
             {
+
                 Shoot();
+
             }
             else
             {
+
                 ShootAlt();
+
             }
 
         }
@@ -76,21 +81,27 @@ public class CanonController : MonoBehaviour
         GetComponent<SpriteRenderer>().color = tanqueCuerpoRenderer.color;
 
         animator.SetFloat("Fire1", Mathf.Abs(fire1));
+
     }
 
 
 
     void Aim()
     {
+   
         Vector3 mousePosition = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.transform.position.z));
 
         Vector3 direction = (mousePosition - transform.position).normalized;
 
         float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+
         targetAngle = Mathf.Clamp(targetAngle, minRotation, 90f);
 
         Quaternion targetRotation = Quaternion.AngleAxis(targetAngle, Vector3.forward);
+
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+
     }
 
     void ChangeBulletType()
@@ -98,15 +109,16 @@ public class CanonController : MonoBehaviour
 
         if (fire1 == 0)
         { 
+
         fire1 = 1;
         
         }
 
         else if(fire1 == 1)
         {
+
             fire1 = 0;
            
-
         }
         
     }
@@ -115,26 +127,39 @@ public class CanonController : MonoBehaviour
 
     void Shoot()
     {
+
         if (Time.time - timeOfLastShot >= timeBtwShots)
         {
+
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+
             bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+
             timeOfLastShot = Time.time;
+
         }
+
     }
 
 
 
     void ShootAlt()
     {
+
         if (Time.time - altTimeOfLastShot >= altTimeBtwShots)
         {
             GameObject bullet = Instantiate(altBulletPrefab, firePoint.position, transform.rotation);
+
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+
             bulletRb.AddForce(transform.up * altBulletSpeed, ForceMode2D.Impulse);
+
             altTimeOfLastShot = Time.time;
+
         }
+
     }
 
 
