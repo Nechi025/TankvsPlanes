@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
 
     public EnemyStats enemyStats;
-    public int currentHealth;
+    private int currentHealth;
 
     public GameObject bombPrefab; 
     private float lastBombTime; 
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private bool isTakingDamage = false;
     private Color originalColor;
     public Color damageColor = Color.red; 
-    public float damageDuration = 0.5f;
+    private float damageDuration = 0.2f;
 
 
     public AudioClip hurtSound;
