@@ -108,9 +108,9 @@ MonoBehaviour:
   - {fileID: 7689653780959274452, guid: 60b394abcd4b88348a3f0d532af77913, type: 3}
   - {fileID: 4353677728664424796, guid: 1e204113fbbd5a441a7f5d2a22b60d71, type: 3}
   moveSpeed: 2
-  attackCooldown: 3
-  bossMaxHealth: 5000
-  bossCurrentHealth: 5000
+  attackCooldown: 3.5
+  bossMaxHealth: 2250
+  bossCurrentHealth: 2250
   damageColor: {r: 1, g: 0.64705884, b: 0.64705884, a: 1}
   damageDuration: 0.2
   hurtSound: {fileID: 8300000, guid: df7889fc5cb051c4d9728f0523972f72, type: 3}
@@ -172,8 +172,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: df7889fc5cb051c4d9728f0523972f72, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.731
+  m_PlayOnAwake: 0
+  m_Volume: 0.576
   m_Pitch: 0.61
   Loop: 0
   Mute: 0

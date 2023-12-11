@@ -107,6 +107,7 @@ public class BossFight : MonoBehaviour, IDamageable
         if (bossCurrentHealth <= 0)
         {
             Destroy(gameObject);
+            GameManager.instance.YouWin();
         }
         PlayHurtSound();
     }

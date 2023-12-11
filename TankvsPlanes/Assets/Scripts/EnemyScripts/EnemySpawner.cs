@@ -49,8 +49,6 @@ public class EnemySpawner : MonoBehaviour
                 yield return new WaitForSeconds(currentWaveSettings.timeBetweenSpawns);
             }
         }
-        yield return new WaitForSeconds(8);
-
-        GameManager.instance.YouWin();
+        
     }
 }
