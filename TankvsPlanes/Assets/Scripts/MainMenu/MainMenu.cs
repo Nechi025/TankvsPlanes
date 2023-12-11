@@ -9,8 +9,6 @@ public class MainMenu : MonoBehaviour
     public GameObject selectMenu;
     public GameObject win;
     public GameObject lose;
-    public GameObject selected;
-    private int index = 1;
 
     [SerializeField] private AudioClip switchSelect;
 
@@ -24,26 +22,18 @@ public class MainMenu : MonoBehaviour
                 selectMenu.SetActive(true);
             }
 
-            else if (selectMenu.activeSelf == true && index == 0)
-            {
-                SceneManager.LoadScene(1);
-            }
-
-            else if (selectMenu.activeSelf == true && index == 5)
-            {
-                Application.Quit();
-            }
-
             else if (win.activeSelf == true)
             {
                 win.SetActive(false);
                 mainMenu.SetActive(true);
+                Cursor.visible = true;
             }
 
             else if (lose.activeSelf == true)
             {
                 lose.SetActive(false);
                 mainMenu.SetActive(true);
+                Cursor.visible = true;
             }
         }
 
@@ -61,39 +51,15 @@ public class MainMenu : MonoBehaviour
             lose.SetActive(true);
             GameManager.instance.gameState = 0;
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.S) && index < 5 && selectMenu.activeSelf == true)
-        {
-            index++;
-            SoundManager.Instance.playSound(switchSelect);
-        }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
-        if (Input.GetKeyDown(KeyCode.W) && index > 0 && selectMenu.activeSelf == true)
-        {
-            index--;
-            SoundManager.Instance.playSound(switchSelect);
-        }
-
-        switch (index)
-        {
-            case 0:
-                selected.transform.position = new Vector3(955, 885, 0);
-                break;
-            case 1:
-                selected.transform.position = new Vector3(955, 720, 0);
-                break;
-            case 2:
-                selected.transform.position = new Vector3(955, 570, 0);
-                break;
-            case 3:
-                selected.transform.position = new Vector3(955, 470, 0);
-                break;
-            case 4:
-                selected.transform.position = new Vector3(955, 320, 0);
-                break;
-            case 5:
-                selected.transform.position = new Vector3(955, 220, 0);
-                break;
-        }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
