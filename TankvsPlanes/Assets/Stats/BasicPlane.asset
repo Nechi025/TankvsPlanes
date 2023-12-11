@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BasicPlane
   m_EditorClassIdentifier: 
   maxHealth: 100
-  speed: 8
-  lifetime: 8
+  speed: 6
+  lifetime: 6
   bombAmount: 1
-  bombDelay: 1
+  bombDelay: 0
   bombCooldown: 1

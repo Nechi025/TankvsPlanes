@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MissilePlane
   m_EditorClassIdentifier: 
   maxHealth: 200
-  speed: 6
-  lifetime: 10
+  speed: 3
+  lifetime: 16
   bombAmount: 2
   bombDelay: 1
-  bombCooldown: 2
+  bombCooldown: 3

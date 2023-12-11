@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HeavyPlane
   m_EditorClassIdentifier: 
   maxHealth: 150
-  speed: 7
-  lifetime: 8
+  speed: 4
+  lifetime: 6
   bombAmount: 3
-  bombDelay: 0.5
+  bombDelay: 0.25
   bombCooldown: 3

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Helicopter
   m_EditorClassIdentifier: 
   maxHealth: 250
-  speed: 5
-  lifetime: 10
-  bombAmount: 6
-  bombDelay: 0.3
-  bombCooldown: 5
+  speed: 2.5
+  lifetime: 15
+  bombAmount: 5
+  bombDelay: 0.125
+  bombCooldown: 4.5
