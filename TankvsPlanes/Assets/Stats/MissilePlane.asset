@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ca1463ca5dfa14d8f04689add798af, type: 3}
+  m_Name: MissilePlane
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  speed: 6
+  lifetime: 10
+  bombAmount: 2
+  bombDelay: 1
+  bombCooldown: 2

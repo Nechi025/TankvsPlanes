@@ -7,13 +7,8 @@ public class Enemy : MonoBehaviour, IDamageable
 {
 
 
-    public int maxHealth;
-    public float speed;
-    public float lifetime;
-    public int bombAmount;
-    public float bombDelay;
-    public float bombCooldown;
-  
+    public EnemyStats enemyStats;
+    public int currentHealth;
 
     public GameObject bombPrefab; 
     private float lastBombTime; 
@@ -33,17 +28,18 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, enemyStats.lifetime);
         originalColor = GetComponent<SpriteRenderer>().color;
         audioSource = GetComponent<AudioSource>();
+        currentHealth = enemyStats.maxHealth;
     }
 
     private void Update()
     {
 
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * enemyStats.speed * Time.deltaTime);
 
-        if (!isBombing && Time.time - lastBombTime >= bombCooldown)
+        if (!isBombing && Time.time - lastBombTime >= enemyStats.bombCooldown)
         {
             StartBombing();
         }
@@ -55,13 +51,13 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
 
-        maxHealth -= damage;
+        currentHealth -= damage;
     
 
         StartCoroutine(ShowDamageIndicator());
         
 
-        if (maxHealth <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
 
@@ -92,22 +88,14 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private IEnumerator DropBombs()
     {
-        for (int i = 0; i < bombAmount; i++)
+        for (int i = 0; i < enemyStats.bombAmount; i++)
         {
-
-           
             GameObject bomb = Instantiate(bombPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(bombDelay);
-
-
-
+            yield return new WaitForSeconds(enemyStats.bombDelay);
         }
-
 
         isBombing = false;
         lastBombTime = Time.time;
-
-
     }
 
 

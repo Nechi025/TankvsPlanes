@@ -147,12 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6da66d0705a6a54dbbbcfe12f2d795c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  speed: 3
-  lifetime: 16
-  bombAmount: 1
-  bombDelay: 1
-  bombCooldown: 3
+  enemyStats: {fileID: 11400000, guid: 6955bddfdd16d2c4083e93870dec49a8, type: 2}
   bombPrefab: {fileID: 3555464029307717793, guid: 2df21994e23ca1c429b68422d1d712a2, type: 3}
   damageColor: {r: 1, g: 0.5176471, b: 0.5176471, a: 1}
   damageDuration: 0.5
